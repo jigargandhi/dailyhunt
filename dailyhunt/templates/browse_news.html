@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<h2>News</h6>
+    <hr/>
+{% for news_post in news %}
+<div class="newspost">
+    <div class="thumbnail">
+
+    </div>
+    <div class="content">
+        <div class="title">
+            <a href="#">{{news_post.title}}</a>
+        </div>
+        <div class="subtitle">
+            {{news_post.subtitle}}
+        </div>
+    </div>
+</div>
+{% endfor%} {% endblock content %}

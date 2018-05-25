@@ -1,0 +1,45 @@
+body{
+    background-image: url(../img/light_grey.png)
+}
+.navbar{
+    background-color:#25a59a!important;
+}
+.card{
+    margin-right:50px;
+    width:275px;
+}
+
+.newspost{
+    display:flex;
+    
+    width:100%;
+    margin:10px 5px;
+    padding:2px;
+    box-shadow: 2px 2px 5px 0px rgb(0, 0, 0);
+}
+
+.newspost .thumbnail{
+    padding: 5px;
+    width:200px;
+    height:150px;
+}
+
+.newspost .content{
+background-color: white;
+width:100%;
+padding:5px 10px;
+}
+
+.newspost .content .title a
+{
+    font-weight: bold;
+    font-size:19px;
+    color:#1c2024;
+}
+
+.newspost .content .subtitle
+{
+    font-weight: regular;
+    font-size:15px;
+    
+}
