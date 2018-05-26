@@ -5,9 +5,6 @@ from .models import News, Language
 from .forms import NewsForm, TagForm
 
 
-def index(request):
-    return render(request, 'index.html')
-
 
 class NewNewsView(View):
     def post(self, request):

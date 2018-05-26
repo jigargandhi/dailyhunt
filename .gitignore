@@ -19,3 +19,6 @@ tests/report/
 
 .vscode
 venv
+db.sqlite3
+my.cnf
+my.cnf
