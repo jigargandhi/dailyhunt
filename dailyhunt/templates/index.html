@@ -5,15 +5,15 @@
         <div class="card-body">
           <h4 class="card-title">News</h4>
           <p class="card-text">Manage your news articles</p>
-          <a href="{% url 'create'%}" class="card-link">Add News</a>
-          <a href="{% url 'browse'%}" class="card-link">Browse all News</a>
+          <a href="{% url 'news:create'%}" class="card-link">Add News</a>
+          <a href="{% url 'news:browse'%}" class="card-link">Browse all News</a>
         </div>
       </div>
       <div class="card">
             <div class="card-body">
               <h4 class="card-title">Buzz</h4>
               <p class="card-text">Manage your videos.</p>
-              <a href="#" class="card-link">Add Videos</a>
+              <a href="{% url 'buzz:create'%}" class="card-link">Add Videos</a>
               <a href="#" class="card-link">Browse all videos</a>
             </div>
           </div>
@@ -21,7 +21,7 @@
                 <div class="card-body">
                   <h4 class="card-title">Tags</h4>
                   <p class="card-text">Manage tags</p>
-                  <a href="{% url 'create_tag'%}" class="card-link">Add tags</a>
+                  <a href="{% url 'news:create_tag'%}" class="card-link">Add tags</a>
                   <a href="#" class="card-link">Browse all tags</a>
                 </div>
               </div>

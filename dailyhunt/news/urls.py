@@ -1,7 +1,7 @@
 from django.urls import include, path
 from news import views
 
-
+app_name='news'
 urlpatterns = [
     path('create', views.NewNewsView.as_view(), name='create'),
     path('browse', views.NewsView.as_view(), name='browse'),
