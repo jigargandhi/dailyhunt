@@ -3,18 +3,32 @@
 {% block content %}
 <h2>News</h6>
     <hr/>
-{% for news_post in news %}
-<div class="newspost">
-    <div class="thumbnail">
-
-    </div>
-    <div class="content">
-        <div class="title">
-            <a href="#">{{news_post.title}}</a>
-        </div>
-        <div class="subtitle">
-            {{news_post.subtitle}}
-        </div>
-    </div>
+<div class='row'>
+<div class='col-md-3'>
+    <ul class="list-group">
+    {% for tag in tags %}
+    <li class="list-group-item">
+        {{tag.name}}
+    </li>
+    {%endfor%}
+    </ul>
 </div>
-{% endfor%} {% endblock content %}
+<div class='col-md-9'>
+    {% for news_post in news %}
+    <div class="newspost">
+        <div class="thumbnail">
+    
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="{% url 'news:see' news_post.id news_post.slugify %}">{{news_post.title}}</a>
+            </div>
+            <div class="subtitle">
+                {{news_post.subtitle}}
+            </div>
+        </div>
+    </div>
+    {% endfor%} 
+</div>
+</div>
+{% endblock content %}

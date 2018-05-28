@@ -1,8 +1,20 @@
 body{
     background-image: url(../img/light_grey.png)
 }
+body .body.container{
+    min-height:500px;
+}
 .navbar{
-    background-color:#25a59a!important;
+    /* background-color:#25a59a!important; */
+    background-color:rgba(255, 255, 255, .40);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(127,127,127,0.75);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(127,127,127,0.75);
+    box-shadow: 1px 1px 2px 0px rgba(127,127,127,0.75);
+    margin-bottom: 25px;
+}
+
+.navbar .navbar-brand{
+    color: hsl(10,0%,0%)!important
 }
 .card{
     margin-right:50px;

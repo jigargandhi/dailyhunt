@@ -1,1 +1,12 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
+{%block content%}
+<h3>
+    {{news.title}}
+</h3>
+<h6>
+    {{news.subtitle}}
+</h6>
+<div style="background-color:white;padding:5px">
+    {{news.display}}
+</div>
+{%endblock%}

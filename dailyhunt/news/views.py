@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import View
 # Create your views here.
-from .models import News, Language
+from .models import News, Language,Tags
 from .forms import NewsForm, TagForm
 
 
@@ -21,13 +21,14 @@ class NewNewsView(View):
 
 
 class NewsView(View):
-    def get(self, request, news_id=None):
+    def get(self, request, news_id=None,slug_part=None):
         if news_id is not None:
             news = get_object_or_404(News, pk=news_id)
             return render(request, 'see_article.html', {'news': news})
         else:
             news = News.objects.all()
-            return render(request, 'browse_news.html', {'news': news})
+            tags= Tags.objects.all()
+            return render(request, 'browse_news.html', {'news': news,'tags':tags})
 
 
 class TagsView(View):

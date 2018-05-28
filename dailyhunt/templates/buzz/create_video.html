@@ -1,18 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% load crispy_forms_tags %}
-{% block content %}
+{% block content %} 
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/simplemde.min.css'  %}" />
 <script type="text/javascript" src="{% static 'js/simplemde.min.js' %}"></script>
 <form method="POST" novalidate>
-    {% csrf_token %}
-    {{ form |crispy }}
+    {% csrf_token %} {{ form |crispy }}
     <button type="submit">Create</button>
 </form>
 
-{%endblock content%}
-{% block scripts %}
+{%endblock content%} {% block scripts %}
 <script>
     var simplemde = new SimpleMDE();
-</script>
-{% endblock %}
+</script> {% endblock %}
