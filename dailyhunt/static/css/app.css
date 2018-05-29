@@ -1,6 +1,10 @@
+/**
+ * Primary color:  hsla(204, 70%, 50%, 1);
+ Secondary color:  hsla(24, 70%, 50%, 1);
+
 body{
     background-image: url(../img/light_grey.png)
-}
+} */
 body .body.container{
     min-height:500px;
 }
@@ -14,7 +18,7 @@ body .body.container{
 }
 
 .navbar .navbar-brand{
-    color: hsl(10,0%,0%)!important
+    color:  hsla(204, 70%, 50%, 1)!important
 }
 .card{
     margin-right:50px;
@@ -53,5 +57,19 @@ padding:5px 10px;
 {
     font-weight: regular;
     font-size:15px;
+    
+}
+
+.action{
+    background-color: hsla(24, 70%, 50%, 1);
+    color:white;
+    border-color:hsla(24, 70%, 50%, 1);;
+    padding:10px;
+    border:1px solid transparent
+}
+
+.action:hover{
+    background-color: hsla(24, 40%, 50%, 1);
+    border-color: hsla(24, 40%, 50%, 1);
     
 }
