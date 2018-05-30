@@ -4,7 +4,7 @@ from .forms import VideoForm
 from .parse_video import get_video_info
 from .models import Video
 from django.http import HttpResponseBadRequest
-
+import logging
 
 class AddVideoView(View):
     def post(self, request):
@@ -15,6 +15,7 @@ class AddVideoView(View):
             try:
                 metaInfo = get_video_info(url)
                 video.thumbnail_url = metaInfo.image_url
+                video.title = metaInfo.title
                 video.save()
                 return redirect('home')
             except:

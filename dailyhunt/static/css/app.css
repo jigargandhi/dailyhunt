@@ -65,11 +65,12 @@ padding:5px 10px;
     color:white;
     border-color:hsla(24, 70%, 50%, 1);;
     padding:10px;
-    border:1px solid transparent
+    border:1px solid transparent;
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .action:hover{
-    background-color: hsla(24, 40%, 50%, 1);
-    border-color: hsla(24, 40%, 50%, 1);
+    background-color: hsla(22, 70%, 50%, 1);
+    border-color: hsla(22, 70%, 50%, 1);
     
 }

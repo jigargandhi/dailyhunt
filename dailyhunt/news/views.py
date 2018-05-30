@@ -13,11 +13,11 @@ class NewNewsView(View):
             news = form.save(commit=False)
             news.save()
             return redirect('home')
-        return render(request, 'create_news.html', {'form': form})
+        return render(request, 'news/create_news.html', {'form': form})
 
     def get(self, request):
         form = NewsForm()
-        return render(request, 'create_news.html', {'form': form})
+        return render(request, 'news/create_news.html', {'form': form})
 
 
 class NewsView(View):
@@ -28,7 +28,7 @@ class NewsView(View):
         else:
             news = News.objects.all()
             tags= Tags.objects.all()
-            return render(request, 'browse_news.html', {'news': news,'tags':tags})
+            return render(request, 'news/browse_news.html', {'news': news,'tags':tags})
 
 
 class TagsView(View):
