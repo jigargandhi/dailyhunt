@@ -20,9 +20,10 @@ class VideoMetaInfo():
 
 def get_video_info(video_url):
     parsed = urlparse(video_url)
-    if parsed.netloc.index("youtube") >=0 or parsed.netloc.index("youtu.be")>=0:
-        return get_youtube_info(video_url)
-    else:
+    try:
+        if parsed.netloc.index("youtube") >=0 or parsed.netloc.index("youtu.be")>=0:
+            return get_youtube_info(video_url)
+    except ValueError:
         return get_other_info(video_url)
 
 def get_youtube_info(video_url):
@@ -45,7 +46,7 @@ def get_other_info(video_url):
     title=None
     thumbnail_url=None
     for meta in soup.find_all('meta'):
-        if meta.has_attrs('property'):
+        if 'property' in meta.attrs:
             if meta['property']=='og:title':
                 title = meta['content']
             elif meta['property']=='og:image':

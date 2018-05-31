@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/buzz.css' %}">
+<h2>Videos</h6>
+    <hr/>
+    <div class='row'>
+        <div class='col-md-3'>
+            <ul class="list-group">
+                {% for tag in tags %}
+                <li class="list-group-item">
+                    {{tag.name}}
+                </li>
+                {%endfor%}
+            </ul>
+        </div>
+        <div class='col-md-9'>
+            {% for video in videos %}
+            <div class="videopost">
+                <div class='thumbnail'>
+                    <a href='{% url 'buzz:see' video.id %}'>
+                        <img src="{{video.thumbnail_url}}" />
+                       </a>
+                </div>
+                <div class='content'>
+                    <div class="title"><a href='{% url 'buzz:see' video.id %}'>{{video.title}}</a></div>
+                    <div class="subtitle"></div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+    {% endblock content %}

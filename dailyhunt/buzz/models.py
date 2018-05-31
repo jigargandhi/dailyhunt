@@ -11,3 +11,6 @@ class Video(models.Model):
     icon= models.CharField(max_length=500)
     thumbnail_url = models.URLField(name='thumbnail_url',max_length=4096,default='')
     title=models.CharField(max_length=255)
+
+    def get_url(self):
+        return self.video_url

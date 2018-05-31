@@ -1,0 +1,13 @@
+.videopost{
+    display: flex;
+    margin:10px 5px;
+    padding:2px;
+    box-shadow: 2px 2px 5px 0px rgb(0, 0, 0);
+}
+.videopost .content{
+    padding:5px 10px;
+}
+.videopost .thumbnail img{
+    height:100px;
+    width:150px;
+}

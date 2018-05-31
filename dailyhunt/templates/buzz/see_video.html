@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- <video controls>
+        <source src="{{video.video_url}}" />
+</video> -->
+<p>
+    {{video.get_url }}
+</p>
+<iframe src="{{ video.video_url }}" height="350" width="350" ></iframe>
+{% endblock %}
